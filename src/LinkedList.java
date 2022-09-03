@@ -48,9 +48,15 @@ public class LinkedList
    }
       
    //method #2: add node at index
-   public void addAtIndex(int index, int data)
-   {
-         //complete this method
+   public void addAtIndex(int index, int data) {
+
+      if (index == 0)
+         addFirstNode(data);
+      else if (index >= countNodes())
+         addLastNode(data);
+      else {
+
+      }
    }
       
    //method #3: remove first node
@@ -74,8 +80,15 @@ public class LinkedList
    //method #6: countNodes
    public int countNodes() {
       int listSize= 0;
-      //complete this method
-      //these methods returns the list size
+
+      Node temp = head;
+
+      while (temp != null)
+      {
+         listSize++;
+         temp = temp.next;
+      }
+
       return listSize;
    }
    

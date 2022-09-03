@@ -11,7 +11,7 @@
  * addLast
  * printForward
  * removeFirst
- * size is bugged Need to correct
+ * countNodes
  *
  * Need to do
  * Add at index
@@ -30,11 +30,6 @@ public class myTest {
       LinkedList myList = new LinkedList(); //create a list object
 
       int option, data;
-
-      //for (int i=1; i <= 5; i++) //add 5 nodes to the list
-      //{
-         //myList.addLastNode(i*10);
-      //}
 
       while (true) {
 
