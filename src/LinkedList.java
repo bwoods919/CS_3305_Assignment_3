@@ -37,7 +37,14 @@ public class LinkedList
    //method #1: add first node
    public void addFirstNode(int data)
    {
-         //complete this method
+      if (tail == null)
+         head = tail = new Node(data); //empty list
+      else
+      {
+         Node temp = new Node(data);
+         temp.next = head;
+         head = temp;
+      }
    }
       
    //method #2: add node at index
@@ -49,7 +56,7 @@ public class LinkedList
    //method #3: remove first node
    public void removeFirstNode()
    {
-         //complete this method
+      head.next = head.next.next;
    }
       
    //method #4: remove last node
@@ -68,7 +75,7 @@ public class LinkedList
    public int countNodes() {
       int listSize= 0;
       //complete this method
-      //this methods returns the list size
+      //these methods returns the list size
       return listSize;
    }
    

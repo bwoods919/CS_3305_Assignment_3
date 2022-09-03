@@ -5,23 +5,132 @@
 // Assignment: 3
 // IDE Name: IntelliJ
 
+/**
+ * Done with
+ * addFirst
+ * addLast
+ * printForward
+ * removeFirst
+ * size is bugged Need to correct
+ *
+ * Need to do
+ * Add at index
+ * Remove Last Node
+ * Remove at index
+ * Print In Reverse
+ * */
+
 import java.util.Scanner;
 
 public class myTest {
    public static void main (String[] args) {
+
       Scanner input = new Scanner(System.in);
 
       LinkedList myList = new LinkedList(); //create a list object
-   
-      for (int i=1; i <= 5; i++) //add 5 nodes to the list
-      {
-         myList.addLastNode(i*10);
-      } 
-      
-      //print out the list content
-      System.out.print("My test list values are:  ");
-      myList.printList();
-      System.out.println();    
+
+      int option, data;
+
+      //for (int i=1; i <= 5; i++) //add 5 nodes to the list
+      //{
+         //myList.addLastNode(i*10);
+      //}
+
+      while (true) {
+
+         printMenu();
+         option = input.nextInt();
+
+         switch (option) {
+
+            case 1: // Add First Node
+
+               System.out.println();
+               System.out.println("Testing method addFirstNode()");
+               System.out.print("Enter the number to add: ");
+               data = input.nextInt();
+
+               System.out.println("Adding value " + data + " as first node.");
+               System.out.print("List content before adding " + data + " is: ");
+               myList.printList();
+               System.out.println();
+
+               myList.addFirstNode(data);
+
+               System.out.print("List content after adding " + data + " is: ");
+               myList.printList();
+               System.out.println();
+               System.out.println();
+
+               break;
+            case 2: // Add Last Node
+
+               System.out.println();
+               System.out.println("Testing method addLastNode()");
+               System.out.print("Enter the number to add: ");
+               data = input.nextInt();
+
+               System.out.println("Adding value " + data + " as last node.");
+               System.out.print("List content before adding " + data + " is: ");
+               myList.printList();
+               System.out.println();
+
+               myList.addLastNode(data);
+
+               System.out.print("List content after adding " + data + " is: ");
+               myList.printList();
+               System.out.println();
+               System.out.println();
+
+               break;
+            case 3: // Add at Index
+
+               /** Need to complete */
+
+               break;
+            case 4: // Remove First Node
+
+               System.out.println();
+               System.out.println("Testing removeFirstNode()");
+               System.out.println();
+
+               break;
+            case 5: // Remove Last Node
+
+               /** Need to complete */
+
+               break;
+            case 6: // Remove At Index
+
+               /** Need to complete */
+
+               break;
+            case 7: // Print List Size
+
+               System.out.println();
+               System.out.println("The size of the list is: " + myList.countNodes());
+               System.out.println();
+
+               break;
+            case 8: // Print List (Forward)
+
+               System.out.println();
+               System.out.println("Testing printList()");
+               System.out.print("The list printed forwards is: ");
+               myList.printList();
+               System.out.println();
+
+               break;
+            case 9: // Print List in Reverse
+
+               /** Need to complete */
+
+               break;
+            case 10: // Exit Program
+               System.exit(-1);
+               break;
+         }
+      }
    }
 
    private static void printMenu() {
@@ -40,4 +149,3 @@ public class myTest {
       System.out.print("Enter option number: ");
    }
 }
-
