@@ -14,7 +14,7 @@
  * countNodes
  *
  * Need to do
- * Add at index
+ * Add at index - Has some issues but is mostly done
  * Remove Last Node
  * Remove at index
  * Print In Reverse
@@ -29,7 +29,7 @@ public class myTest {
 
       LinkedList myList = new LinkedList(); //create a list object
 
-      int option, data;
+      int option, data, index;
 
       while (true) {
 
@@ -80,7 +80,27 @@ public class myTest {
                break;
             case 3: // Add at Index
 
-               /** Need to complete */
+               System.out.println();
+               System.out.println("Testing method addAtIndex()");
+
+               System.out.print("Enter the node to add at: ");
+               index = input.nextInt();
+
+               System.out.print("Enter the number to add: ");
+               data = input.nextInt();
+
+               System.out.println("Adding value " + data + " as node at index " + index + ".");
+               System.out.print("List content before adding " + data + " is: ");
+               myList.printList();
+               System.out.println();
+
+               myList.addAtIndex(index, data);
+
+               System.out.print("List content after adding " + data + " is: ");
+               myList.printList();
+               System.out.println();
+               System.out.println();
+
 
                break;
             case 4: // Remove First Node
@@ -88,16 +108,51 @@ public class myTest {
                System.out.println();
                System.out.println("Testing removeFirstNode()");
                System.out.println();
+               System.out.print("List content before removing the first node is: ");
+               myList.printList();
+               System.out.println();
+
+               myList.removeFirstNode();
+
+               System.out.print("List content after removing the first node is: ");
+               myList.printList();
+               System.out.println();
 
                break;
             case 5: // Remove Last Node
 
-               /** Need to complete */
+               System.out.println();
+               System.out.println("Testing removeLastNode()");
+               System.out.println();
+               System.out.print("List content before removing the last node is: ");
+               myList.printList();
+               System.out.println();
+
+               myList.removeLastNode();
+
+               System.out.print("List content after removing the last node is: ");
+               myList.printList();
+               System.out.println();
 
                break;
             case 6: // Remove At Index
 
-               /** Need to complete */
+               System.out.println();
+               System.out.println("Testing removeAtIndex()");
+
+               System.out.print("Enter the index of the node you would like to remove: ");
+               index = input.nextInt();
+
+               System.out.println();
+               System.out.print("List content before removing the node at index " + index + " is: ");
+               myList.printList();
+               System.out.println();
+
+               myList.removeLastNode();
+
+               System.out.print("List content after removing the node at index " + index + " is: ");
+               myList.printList();
+               System.out.println();
 
                break;
             case 7: // Print List Size
@@ -118,7 +173,11 @@ public class myTest {
                break;
             case 9: // Print List in Reverse
 
-               /** Need to complete */
+               System.out.println();
+               System.out.println("Testing printInReverse");
+               System.out.print("The list printed in reverse is: ");
+               myList.printInReverse(myList.head);
+               System.out.println();
 
                break;
             case 10: // Exit Program

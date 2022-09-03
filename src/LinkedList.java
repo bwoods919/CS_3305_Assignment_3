@@ -39,8 +39,7 @@ public class LinkedList
    {
       if (tail == null)
          head = tail = new Node(data); //empty list
-      else
-      {
+      else {
          Node temp = new Node(data);
          temp.next = head;
          head = temp;
@@ -55,7 +54,17 @@ public class LinkedList
       else if (index >= countNodes())
          addLastNode(data);
       else {
+         Node current = head;
+         Node temp = head.next;
 
+         for (int i = 0; i < index; i++) {
+            current = current.next;
+            temp = temp.next;
+         }
+
+         temp = current.next;
+         current.next = new Node(data);
+         (current.next).next = temp;
       }
    }
       
