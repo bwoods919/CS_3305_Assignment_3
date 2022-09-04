@@ -57,7 +57,7 @@ public class LinkedList
          Node current = head;
          Node temp = head.next;
 
-         for (int i = 0; i < index; i++) {
+         for (int i = 0; i < index - 1; i++) {
             current = current.next;
             temp = temp.next;
          }
@@ -67,23 +67,53 @@ public class LinkedList
          (current.next).next = temp;
       }
    }
-      
+
    //method #3: remove first node
    public void removeFirstNode()
    {
       head.next = head.next.next;
    }
-      
+
    //method #4: remove last node
    public void removeLastNode()
    {
-         //complete this method
+      if (countNodes() == 1)
+         head = tail = null;
+
+      else {
+
+         Node current = head;
+         int size = countNodes();
+
+         for (int i = 0; i < size - 2; i++) {
+            current = current.next;
+         }
+
+         Node temp = tail;
+         tail = current;
+         tail.next = null;
+      }
    }
 
    //method #5: remove node at index
    public void removeAtIndex(int index)
    {
-         //complete this method
+      if (index < 0 || index >= countNodes())
+         countNodes();
+      else if (index == 0)
+         removeFirstNode();
+      else if (index == countNodes() - 1)
+         removeLastNode();
+      else {
+         Node previous = head;
+
+         for (int i = 0; i < index - 1; i++) {
+            previous = previous.next;
+         }
+
+         Node current = previous.next;
+         previous.next = current.next;
+      }
    }
 
    //method #6: countNodes
@@ -104,7 +134,7 @@ public class LinkedList
    //method #7: printInReverse  (Recursive method)
    public void printInReverse(Node L)
    {
-         //complete this method as recursive methods
+      //complete this method as recursive methods
    }   
 
    //================= end of your part ==============
