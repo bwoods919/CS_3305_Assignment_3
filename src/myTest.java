@@ -14,10 +14,10 @@
  * countNodes
  * Removed Last Node
  * AddAtIndex
+ * Print in reverse
  *
  * ---Need to do---
  * Remove at index - having a similar issue to addAtIndex
- * Print In Reverse
  * */
 
 import java.util.Scanner;
@@ -104,6 +104,7 @@ public class myTest {
                System.out.print("List content after removing the first node is: ");
                myList.printList();
                System.out.println();
+               System.out.println();
             }
             case 5 -> { // Remove Last Node
 
@@ -116,6 +117,7 @@ public class myTest {
                myList.removeLastNode();
                System.out.print("List content after removing the last node is: ");
                myList.printList();
+               System.out.println();
                System.out.println();
             }
             case 6 -> { // Remove At Index
@@ -132,11 +134,13 @@ public class myTest {
                System.out.print("List content after removing the node at index " + index + " is: ");
                myList.printList();
                System.out.println();
+               System.out.println();
             }
             case 7 -> { // Print List Size
 
                System.out.println();
                System.out.println("The size of the list is: " + myList.countNodes());
+               System.out.println();
                System.out.println();
             }
             case 8 -> { // Print List (Forward)
@@ -146,6 +150,7 @@ public class myTest {
                System.out.print("The list printed forwards is: ");
                myList.printList();
                System.out.println();
+               System.out.println();
             }
             case 9 -> { // Print List in Reverse
 
@@ -153,6 +158,7 @@ public class myTest {
                System.out.println("Testing printInReverse");
                System.out.print("The list printed in reverse is: ");
                myList.printInReverse(myList.head);
+               System.out.println();
                System.out.println();
             }
             case 10 -> // Exit Program

@@ -99,7 +99,7 @@ public class LinkedList
    public void removeAtIndex(int index)
    {
       if (index < 0 || index >= countNodes())
-         countNodes();
+         return;
       else if (index == 0)
          removeFirstNode();
       else if (index == countNodes() - 1)
@@ -134,8 +134,12 @@ public class LinkedList
    //method #7: printInReverse  (Recursive method)
    public void printInReverse(Node L)
    {
-      //complete this method as recursive methods
-   }   
+      if (L.next == null) return;
+
+      printInReverse(L.next);
+
+      System.out.print(L.data + "   ");
+   }
 
    //================= end of your part ==============
 
