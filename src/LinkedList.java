@@ -102,7 +102,7 @@ public class LinkedList
          return;
       else if (index == 0)
          removeFirstNode();
-      else if (index == countNodes() - 1)
+      else if (index == (countNodes() - 1))
          removeLastNode();
       else {
          Node previous = head;

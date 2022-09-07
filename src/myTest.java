@@ -5,21 +5,6 @@
 // Assignment: 3
 // IDE Name: IntelliJ
 
-/**
- * ---Done---
- * addFirst
- * addLast
- * printForward
- * removeFirst
- * countNodes
- * Removed Last Node
- * AddAtIndex
- * Print in reverse
- *
- * ---Need to do---
- * Remove at index - having a similar issue to addAtIndex
- * */
-
 import java.util.Scanner;
 
 public class myTest {
@@ -31,10 +16,10 @@ public class myTest {
 
       int option, data, index;
 
-      for (int i=1; i <= 5; i++) //add 5 nodes to the list
-      {
-         myList.addLastNode(i*10);
-      }
+      //for (int i=1; i <= 5; i++) //add 5 nodes to the list
+      //{
+         //myList.addLastNode(i*10);
+      //}
 
       while (true) {
 
@@ -45,7 +30,7 @@ public class myTest {
             case 1 -> { // Add First Node
 
                System.out.println();
-               System.out.println("Testing method addFirstNode()");
+               //System.out.println("Testing method addFirstNode()");
                System.out.print("Enter the number to add: ");
                data = input.nextInt();
                System.out.println("Adding value " + data + " as first node.");
@@ -61,7 +46,7 @@ public class myTest {
             case 2 -> { // Add Last Node
 
                System.out.println();
-               System.out.println("Testing method addLastNode()");
+               //System.out.println("Testing method addLastNode()");
                System.out.print("Enter the number to add: ");
                data = input.nextInt();
                System.out.println("Adding value " + data + " as last node.");
@@ -77,7 +62,7 @@ public class myTest {
             case 3 -> { // Add at Index
 
                System.out.println();
-               System.out.println("Testing method addAtIndex()");
+               //System.out.println("Testing method addAtIndex()");
                System.out.print("Enter the node to add at: ");
                index = input.nextInt();
                System.out.print("Enter the number to add: ");
@@ -94,8 +79,8 @@ public class myTest {
             }
             case 4 -> { // Remove First Node
 
-               System.out.println();
-               System.out.println("Testing removeFirstNode()");
+               //System.out.println();
+               //System.out.println("Testing removeFirstNode()");
                System.out.println();
                System.out.print("List content before removing the first node is: ");
                myList.printList();
@@ -109,7 +94,7 @@ public class myTest {
             case 5 -> { // Remove Last Node
 
                System.out.println();
-               System.out.println("Testing removeLastNode()");
+               //System.out.println("Testing removeLastNode()");
                System.out.println();
                System.out.print("List content before removing the last node is: ");
                myList.printList();
@@ -123,14 +108,14 @@ public class myTest {
             case 6 -> { // Remove At Index
 
                System.out.println();
-               System.out.println("Testing removeAtIndex()");
+               //System.out.println("Testing removeAtIndex()");
                System.out.print("Enter the index of the node you would like to remove: ");
                index = input.nextInt();
                System.out.println();
                System.out.print("List content before removing the node at index " + index + " is: ");
                myList.printList();
                System.out.println();
-               myList.removeLastNode();
+               myList.removeAtIndex(index);
                System.out.print("List content after removing the node at index " + index + " is: ");
                myList.printList();
                System.out.println();
@@ -146,7 +131,7 @@ public class myTest {
             case 8 -> { // Print List (Forward)
 
                System.out.println();
-               System.out.println("Testing printList()");
+               //System.out.println("Testing printList()");
                System.out.print("The list printed forwards is: ");
                myList.printList();
                System.out.println();
@@ -155,7 +140,7 @@ public class myTest {
             case 9 -> { // Print List in Reverse
 
                System.out.println();
-               System.out.println("Testing printInReverse");
+               //System.out.println("Testing printInReverse");
                System.out.print("The list printed in reverse is: ");
                myList.printInReverse(myList.head);
                System.out.println();
