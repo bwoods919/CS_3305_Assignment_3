@@ -164,7 +164,7 @@ public class myTest {
       System.out.println("8 – Print List (Forward)");
       System.out.println("9 – Print List In Reverse");
       System.out.println("10- Exit program");
-      System.out.println("");
+      System.out.println();
       System.out.print("Enter option number: ");
    }
 }
