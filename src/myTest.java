@@ -61,65 +61,90 @@ public class myTest {
             }
             case 3 -> { // Add at Index
 
-               System.out.println();
-               //System.out.println("Testing method addAtIndex()");
-               System.out.print("Enter the node to add at: ");
-               index = input.nextInt();
-               System.out.print("Enter the number to add: ");
-               data = input.nextInt();
-               System.out.println("Adding value " + data + " as node at index " + index + ".");
-               System.out.print("List content before adding " + data + " is: ");
-               myList.printList();
-               System.out.println();
-               myList.addAtIndex(index, data);
-               System.out.print("List content after adding " + data + " is: ");
-               myList.printList();
-               System.out.println();
-               System.out.println();
+               if (myList.countNodes() == 0)
+                  System.out.println("\nList is empty\n");
+               else {
+                  System.out.println();
+                  //System.out.println("Testing method addAtIndex()");
+                  System.out.print("Enter the node to add at: ");
+                  index = input.nextInt();
+
+                  if (index < 0 || index > myList.countNodes())
+                     System.out.println("\nInvalid index, try again\n");
+                  else {
+                     System.out.print("Enter the number to add: ");
+                     data = input.nextInt();
+                     System.out.println("Adding value " + data + " as node at index " + index + ".");
+                     System.out.print("List content before adding " + data + " is: ");
+                     myList.printList();
+                     System.out.println();
+                     myList.addAtIndex(index, data);
+                     System.out.print("List content after adding " + data + " is: ");
+                     myList.printList();
+                     System.out.println();
+                     System.out.println();
+                  }
+               }
             }
             case 4 -> { // Remove First Node
 
-               //System.out.println();
-               //System.out.println("Testing removeFirstNode()");
-               System.out.println();
-               System.out.print("List content before removing the first node is: ");
-               myList.printList();
-               System.out.println();
-               myList.removeFirstNode();
-               System.out.print("List content after removing the first node is: ");
-               myList.printList();
-               System.out.println();
-               System.out.println();
+               if (myList.countNodes() == 0)
+                  System.out.println("\nList is Empty\n");
+               else {
+                  //System.out.println();
+                  //System.out.println("Testing removeFirstNode()");
+                  System.out.println();
+                  System.out.print("List content before removing the first node is: ");
+                  myList.printList();
+                  System.out.println();
+                  myList.removeFirstNode();
+                  System.out.print("List content after removing the first node is: ");
+                  myList.printList();
+                  System.out.println();
+                  System.out.println();
+               }
             }
             case 5 -> { // Remove Last Node
 
-               System.out.println();
-               //System.out.println("Testing removeLastNode()");
-               System.out.println();
-               System.out.print("List content before removing the last node is: ");
-               myList.printList();
-               System.out.println();
-               myList.removeLastNode();
-               System.out.print("List content after removing the last node is: ");
-               myList.printList();
-               System.out.println();
-               System.out.println();
+               if (myList.countNodes() == 0)
+                  System.out.println("\nList is Empty");
+               else {
+                  System.out.println();
+                  //System.out.println("Testing removeLastNode()");
+                  System.out.println();
+                  System.out.print("List content before removing the last node is: ");
+                  myList.printList();
+                  System.out.println();
+                  myList.removeLastNode();
+                  System.out.print("List content after removing the last node is: ");
+                  myList.printList();
+                  System.out.println();
+                  System.out.println();
+               }
             }
             case 6 -> { // Remove At Index
 
-               System.out.println();
-               //System.out.println("Testing removeAtIndex()");
-               System.out.print("Enter the index of the node you would like to remove: ");
-               index = input.nextInt();
-               System.out.println();
-               System.out.print("List content before removing the node at index " + index + " is:\t");
-               myList.printList();
-               System.out.println();
-               myList.removeAtIndex(index);
-               System.out.print("List content after removing the node at index " + index + " is:\t");
-               myList.printList();
-               System.out.println();
-               System.out.println();
+               if (myList.countNodes() == 0)
+                  System.out.println("\nList is Empty\n");
+               else {
+                  System.out.println();
+                  //System.out.println("Testing removeAtIndex()");
+                  System.out.print("Enter the index of the node you would like to remove: ");
+                  index = input.nextInt();
+                  if (index < 0 || index >= myList.countNodes()) {
+                     System.out.println("Invalid index, try again\n");
+                  } else {
+                     System.out.println();
+                     System.out.print("List content before removing the node at index " + index + " is:\t");
+                     myList.printList();
+                     System.out.println();
+                     myList.removeAtIndex(index);
+                     System.out.print("List content after removing the node at index " + index + " is:\t");
+                     myList.printList();
+                     System.out.println();
+                     System.out.println();
+                  }
+               }
             }
             case 7 -> { // Print List Size
 
