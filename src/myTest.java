@@ -112,11 +112,11 @@ public class myTest {
                System.out.print("Enter the index of the node you would like to remove: ");
                index = input.nextInt();
                System.out.println();
-               System.out.print("List content before removing the node at index " + index + " is: ");
+               System.out.print("List content before removing the node at index " + index + " is:\t");
                myList.printList();
                System.out.println();
                myList.removeAtIndex(index);
-               System.out.print("List content after removing the node at index " + index + " is: ");
+               System.out.print("List content after removing the node at index " + index + " is:\t");
                myList.printList();
                System.out.println();
                System.out.println();

@@ -71,7 +71,16 @@ public class LinkedList
    //method #3: remove first node
    public void removeFirstNode()
    {
-      head.next = head.next.next;
+      if (head == null)
+         return;
+      else {
+         if (head == tail) {
+            head = null;
+            tail = null;
+         } else {
+            head = head.next;
+         }
+      }
    }
 
    //method #4: remove last node
