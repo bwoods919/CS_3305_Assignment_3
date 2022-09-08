@@ -143,11 +143,11 @@ public class LinkedList
    //method #7: printInReverse  (Recursive method)
    public void printInReverse(Node L)
    {
-      if (L.next == null) return;
+      if (L != null) {
 
-      printInReverse(L.next);
-
-      System.out.print(L.data + "   ");
+         printInReverse(L.next);
+         System.out.print(L.data + "   ");
+      }
    }
 
    //================= end of your part ==============

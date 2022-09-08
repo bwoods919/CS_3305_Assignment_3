@@ -107,7 +107,7 @@ public class myTest {
             case 5 -> { // Remove Last Node
 
                if (myList.countNodes() == 0)
-                  System.out.println("\nList is Empty");
+                  System.out.println("\nList is Empty\n");
                else {
                   System.out.println();
                   //System.out.println("Testing removeLastNode()");
@@ -155,21 +155,29 @@ public class myTest {
             }
             case 8 -> { // Print List (Forward)
 
-               System.out.println();
-               //System.out.println("Testing printList()");
-               System.out.print("The list printed forwards is: ");
-               myList.printList();
-               System.out.println();
-               System.out.println();
+               if (myList.countNodes() == 0)
+                  System.out.println("\nList is Empty\n");
+               else {
+                  System.out.println();
+                  //System.out.println("Testing printList()");
+                  System.out.print("The list printed forwards is: ");
+                  myList.printList();
+                  System.out.println();
+                  System.out.println();
+               }
             }
             case 9 -> { // Print List in Reverse
 
-               System.out.println();
-               //System.out.println("Testing printInReverse");
-               System.out.print("The list printed in reverse is: ");
-               myList.printInReverse(myList.head);
-               System.out.println();
-               System.out.println();
+               if (myList.countNodes() == 0)
+                  System.out.println("\nList is Empty\n");
+               else {
+                  System.out.println();
+                  //System.out.println("Testing printInReverse");
+                  System.out.print("The list printed in reverse is: ");
+                  myList.printInReverse(myList.head);
+                  System.out.println();
+                  System.out.println();
+               }
             }
             case 10 -> // Exit Program
                System.exit(-1);
