@@ -13,7 +13,7 @@ public class LinkedList
 {
    public Node head, tail;
 
-   //constructor method to create a list of object with head, tail, and size. 
+   //constructor method to create a list of object with head, tail, and size.
    public LinkedList()
    {
       head = null;
@@ -21,11 +21,11 @@ public class LinkedList
    }
 
    //method add node to end of list
-   public void addLastNode(int data) 
+   public void addLastNode(int data)
    {
-      if (tail == null) 
+      if (tail == null)
          head = tail = new Node(data); //empty list
-      else 
+      else
       {
          tail.next = new Node(data); //link new node as last node
          tail = tail.next; //make tail pointer points to last node
@@ -33,7 +33,7 @@ public class LinkedList
    }
 
    //======== Your part to complete for this assignment =========
-   
+
    //method #1: add first node
    public void addFirstNode(int data)
    {
@@ -45,7 +45,7 @@ public class LinkedList
          head = temp;
       }
    }
-      
+
    //method #2: add node at index
    public void addAtIndex(int index, int data) {
 
@@ -139,7 +139,7 @@ public class LinkedList
 
       return listSize;
    }
-   
+
    //method #7: printInReverse  (Recursive method)
    public void printInReverse(Node L)
    {
@@ -153,7 +153,7 @@ public class LinkedList
    //================= end of your part ==============
 
    //method to print out the list
-   public void printList() 
+   public void printList()
    {
       Node temp;
       temp = head;
@@ -176,4 +176,3 @@ public class LinkedList
       }
    }
 }
-
